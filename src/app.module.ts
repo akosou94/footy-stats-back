@@ -7,6 +7,8 @@ import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { config } from './config/configuration';
+import { CitiesController } from './cities/cities.controller';
+import { CitiesModule } from './cities/cities.module';
 
 @Module({
   imports: [
@@ -17,8 +19,9 @@ import { config } from './config/configuration';
     FootyModule,
     PrismaModule,
     AuthModule,
+    CitiesModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, CitiesController],
   providers: [AppService],
 })
 export class AppModule {}
