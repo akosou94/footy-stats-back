@@ -18,3 +18,8 @@ model User {
   username String @unique
   password String
 }
+
+model Cities {
+  id   String @default(uuid()) @id
+  name String @unique
+}
