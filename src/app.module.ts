@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
-import { FootyModule } from './footy/footy.module';
+import { MatchesModule } from './matches/matches.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
@@ -16,7 +16,7 @@ import { CitiesModule } from './cities/cities.module';
       load: [config],
     }),
     UsersModule,
-    FootyModule,
+    MatchesModule,
     PrismaModule,
     AuthModule,
     CitiesModule,
